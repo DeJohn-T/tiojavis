@@ -1,0 +1,13 @@
+Drop your photos in this /public folder.
+Suggested filenames:
+  hero.jpg          — hero section (fajita sizzle or bar shot)
+  intro.jpg         — intro section (interior or food)
+  strip-fajita.jpg  — photo strip left
+  strip-bar.jpg     — photo strip middle
+  strip-taco.jpg    — photo strip right
+  bar-top.jpg       — bar section top photo
+  bar-bottom.jpg    — bar section bottom photo
+  menu-dinner.jpg   — dinner menu card
+  menu-lunch.jpg    — lunch menu card
+  menu-bar.jpg      — bar menu card
+  logo.png          — logo (optional, for nav)

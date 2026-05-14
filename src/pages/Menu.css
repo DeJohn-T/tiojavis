@@ -1,0 +1,466 @@
+/* ══════════════════════════════════════════
+   SHARED MENU — clean, centered, editorial
+   ══════════════════════════════════════════ */
+
+.menu-page {
+  padding-top: 64px;
+  background: var(--void);
+  min-height: 100vh;
+}
+
+/* ── COMPACT HERO ── */
+.menu-hero {
+  position: relative;
+  padding: 72px 52px 60px;
+  overflow: hidden;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-faint);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  min-height: 280px;
+}
+
+.menu-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.menu-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(14px) brightness(0.22) saturate(0.5);
+  transform: scale(1.08);
+}
+
+.menu-hero > *:not(.menu-hero-bg) { position: relative; z-index: 1; }
+
+.menu-hero-text { display: flex; flex-direction: column; gap: 10px; }
+
+.menu-hero-kicker {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.menu-hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 0.88;
+  color: var(--cream);
+  margin: 0;
+}
+
+.menu-hero-title em {
+  color: var(--ember);
+  font-style: italic;
+}
+
+.menu-hero-note {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.6;
+  max-width: 380px;
+  margin-top: 4px;
+}
+
+/* ── STICKY TAB BAR ── */
+.menu-tabs-bar {
+  position: sticky;
+  top: 64px;
+  z-index: 200;
+  background: rgba(11,9,7,0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-faint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-tab-link {
+  display: block;
+  padding: 16px 52px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(237,229,210,0.35);
+  border-right: 1px solid var(--border-faint);
+  transition: color 0.2s, background 0.2s;
+}
+
+.menu-tab-link:last-child { border-right: none; }
+.menu-tab-link:hover { color: var(--cream); }
+.menu-tab-link.active {
+  color: var(--ember);
+  background: rgba(196,96,16,0.07);
+}
+
+/* ── MENU BODY: centered column ── */
+.menu-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 52px 24px;
+}
+
+/* ── SECTION ── */
+.menu-section {
+  padding-top: 56px;
+}
+
+.menu-section-head {
+  margin-bottom: 28px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-faint);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.menu-section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.menu-section-note {
+  font-size: 0.75rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+}
+
+/* ── ITEMS ── */
+.menu-item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0 32px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--border-faint);
+  align-items: start;
+}
+
+.menu-item:last-child { border-bottom: none; }
+
+.menu-item-left { display: flex; flex-direction: column; gap: 5px; }
+
+.menu-item-name {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--cream);
+  letter-spacing: -0.01em;
+}
+
+.menu-item-desc {
+  font-size: 0.83rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 560px;
+}
+
+.menu-item-price {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.88rem;
+  color: var(--ember);
+  white-space: nowrap;
+  padding-top: 3px;
+  flex-shrink: 0;
+}
+
+/* variants: span full width below name/price row */
+.menu-item-variants {
+  grid-column: 1 / -1;
+  margin-top: 6px;
+  border-left: 2px solid rgba(237,229,210,0.1);
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.menu-item-variant {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  font-size: 0.82rem;
+  border-bottom: 1px solid rgba(237,229,210,0.04);
+}
+
+.menu-item-variant:last-child { border-bottom: none; }
+.menu-item-variant span:first-child { color: var(--muted); }
+.menu-item-variant span:last-child {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.82rem;
+  color: var(--ember);
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+/* ── FULL-BLEED PHOTO BREAK ── */
+.menu-photo-break {
+  position: relative;
+  height: 48vh;
+  min-height: 300px;
+  max-height: 480px;
+  overflow: hidden;
+  margin-top: 56px;
+}
+
+.menu-photo-break img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(0.8);
+}
+
+.menu-photo-break::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,9,7,0.65) 0%, transparent 55%);
+}
+
+.menu-photo-break-label {
+  position: absolute;
+  bottom: 32px;
+  right: 52px;
+  z-index: 1;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.8rem, 3.5vw, 4rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--cream);
+  text-shadow: 0 2px 24px rgba(0,0,0,0.4);
+}
+
+/* ── FOOTER NOTE ── */
+.menu-footer-note {
+  max-width: 860px;
+  margin: 48px auto 0;
+  padding: 24px 52px 56px;
+  font-size: 0.72rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--ghost);
+  border-top: 1px solid var(--border-faint);
+  text-align: center;
+}
+
+/* ── BAR-SPECIFIC: tequila table ── */
+.tequila-block {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-faint);
+}
+
+.tequila-block-head {
+  margin-bottom: 24px;
+}
+
+.tequila-block-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.tequila-block-desc {
+  font-size: 0.82rem;
+  font-weight: 300;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.tequila-table {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.tequila-col-labels,
+.tequila-row {
+  display: grid;
+  grid-template-columns: 1fr 80px 100px 80px 80px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(237,229,210,0.06);
+  align-items: center;
+}
+
+.tequila-col-labels {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(237,229,210,0.14);
+}
+
+.tequila-col-labels span {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(237,229,210,0.3);
+  text-align: right;
+}
+
+.tequila-col-labels span:first-child { text-align: left; }
+
+.tequila-row:last-child { border-bottom: none; }
+
+.tequila-name {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.tequila-row span:not(.tequila-name) {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.82rem;
+  color: rgba(237,229,210,0.45);
+  text-align: right;
+}
+
+.tequila-flight { color: var(--gold) !important; }
+
+/* happy hour card in bar hero */
+.menu-hero-hh {
+  background: var(--ember);
+  padding: 20px 26px;
+  text-align: center;
+  min-width: 186px;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+.menu-hero-hh-label {
+  display: block;
+  font-family: 'Alfa Slab One', serif;
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 6px;
+}
+
+.menu-hero-hh-time {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(237,229,210,0.65);
+  margin-bottom: 10px;
+}
+
+.menu-hero-hh-deal {
+  font-size: 0.82rem;
+  color: var(--cream);
+  line-height: 1.6;
+}
+
+/* aging legend */
+.aging-legend {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 24px 0 8px;
+  border-bottom: 1px solid var(--border-faint);
+  margin-bottom: 0;
+}
+
+.aging-item { display: flex; flex-direction: column; gap: 4px; }
+
+.aging-label {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.88rem;
+  color: var(--ember);
+}
+
+.aging-desc {
+  font-size: 0.75rem;
+  font-weight: 300;
+  color: var(--muted);
+  max-width: 150px;
+  line-height: 1.5;
+}
+
+/* wine + cerveza category label */
+.menu-cat-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  padding: 18px 0 8px;
+  border-top: 1px solid var(--border-faint);
+  margin-top: 8px;
+}
+
+.menu-cat-label:first-child { border-top: none; padding-top: 0; }
+
+/* ══════════════════════════════════
+   MOBILE — max-width: 768px
+   ══════════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* hero */
+  .menu-hero {
+    padding: 52px 24px 44px;
+    min-height: 220px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  /* tab bar */
+  .menu-tab-link { padding: 14px 28px; font-size: 0.62rem; letter-spacing: 0.16em; }
+
+  /* body */
+  .menu-body { padding: 0 24px 20px; }
+  .menu-section { padding-top: 40px; }
+  .menu-section-head { margin-bottom: 20px; padding-bottom: 14px; }
+  .menu-section-title { font-size: clamp(1.8rem, 7vw, 2.6rem); }
+
+  /* items */
+  .menu-item { padding: 16px 0; }
+  .menu-item-name { font-size: 0.98rem; }
+  .menu-item-desc { font-size: 0.8rem; }
+
+  /* photo break */
+  .menu-photo-break { height: 42vw; min-height: 180px; max-height: 280px; margin-top: 40px; }
+  .menu-photo-break-label { right: 20px; bottom: 20px; font-size: clamp(1.3rem, 5vw, 2.5rem); }
+
+  /* footer note */
+  .menu-footer-note { padding: 20px 24px 40px; }
+
+  /* tequila table — allow horizontal scroll */
+  .tequila-table { overflow-x: auto; }
+  .tequila-col-labels,
+  .tequila-row { min-width: 480px; }
+
+  /* aging legend → 2-col wrap */
+  .aging-legend { gap: 20px; }
+  .aging-desc { max-width: 120px; }
+
+  /* tequila block */
+  .tequila-block { margin-top: 36px; padding-top: 28px; }
+  .tequila-block-title { font-size: 1.6rem; }
+  .tequila-block-desc { font-size: 0.78rem; }
+
+  /* happy hour card in bar hero */
+  .menu-hero-hh { min-width: unset; width: 100%; text-align: left; }
+}

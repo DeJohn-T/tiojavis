@@ -1,0 +1,359 @@
+.catering-page {
+  padding-top: 64px;
+  background: var(--void);
+  min-height: 100vh;
+}
+
+/* ── HERO ── */
+.catering-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 540px;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.catering-hero-text {
+  padding: 72px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  border-right: 1px solid var(--border-faint);
+  background: var(--surface);
+}
+
+.catering-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(3.2rem, 6.5vw, 6rem);
+  font-weight: 300;
+  line-height: 0.9;
+  color: var(--cream);
+}
+
+.catering-title em {
+  font-style: italic;
+  color: var(--ember);
+}
+
+.catering-hero-desc {
+  font-size: 0.93rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 440px;
+}
+
+.catering-hero-photo { overflow: hidden; }
+
+.catering-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55) saturate(0.75);
+}
+
+/* ── SERVICE OPTIONS ── */
+.catering-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid var(--border-faint);
+  background: var(--surface);
+}
+
+.catering-service-card {
+  padding: 52px 44px;
+  border-right: 1px solid var(--border-faint);
+}
+
+.catering-service-card:last-child { border-right: none; }
+
+.catering-service-title {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 1.3rem;
+  color: var(--cream);
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+
+.catering-service-title::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--ember);
+  margin-top: 10px;
+}
+
+.catering-service-body {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+/* ── FAJITA PACK ── */
+.catering-featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.catering-featured-text {
+  padding: 64px 52px;
+  border-right: 1px solid var(--border-faint);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--void);
+}
+
+.catering-featured-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.catering-featured-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--ember);
+  line-height: 1;
+}
+
+.catering-featured-price span {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+.fajita-pack-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.fajita-pack-list li {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.5;
+}
+
+.fajita-pack-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--ember);
+  font-weight: 700;
+}
+
+.catering-featured-photo {
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.catering-featured-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6) saturate(0.8);
+}
+
+/* ── À LA CARTE ── */
+.catering-menu {
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--border-faint);
+  background: var(--surface);
+}
+
+.catering-menu-header {
+  padding: 60px 52px 44px;
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.catering-menu-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+  margin-top: 8px;
+}
+
+.catering-menu-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.catering-cat {
+  padding: 36px 44px;
+  border-right: 1px solid var(--border-faint);
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.catering-cat:nth-child(3n) { border-right: none; }
+.catering-cat:nth-last-child(-n+3) { border-bottom: none; }
+
+.cat-head {
+  display: block;
+  font-family: 'Alfa Slab One', serif;
+  font-size: 1rem;
+  color: var(--cream);
+  margin-bottom: 4px;
+}
+
+.cat-note {
+  font-size: 0.72rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--muted);
+  margin-bottom: 16px;
+}
+
+.cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-faint);
+  font-size: 0.83rem;
+}
+
+.cat-row:last-child { border-bottom: none; }
+
+.cat-row span:first-child {
+  color: rgba(237,229,210,0.7);
+  font-weight: 300;
+  padding-right: 12px;
+}
+
+.cat-row span:last-child {
+  font-family: 'Alfa Slab One', serif;
+  font-size: 0.75rem;
+  color: var(--ember);
+  flex-shrink: 0;
+}
+
+.catering-extras-note {
+  padding: 22px 52px;
+  font-size: 0.72rem;
+  font-style: italic;
+  font-weight: 300;
+  color: var(--ghost);
+  border-top: 1px solid var(--border-faint);
+  text-align: center;
+}
+
+/* ── CONTACT ── */
+.catering-contact {
+  background: var(--surface);
+  padding: 96px 52px;
+  text-align: center;
+  border-top: 1px solid var(--border-faint);
+}
+
+.catering-contact-inner {
+  max-width: 580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.catering-contact-inner .section-kicker { color: var(--gold); }
+
+.catering-contact-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1.05;
+}
+
+.catering-contact-title em {
+  font-style: italic;
+  color: var(--ember);
+}
+
+.catering-contact-body {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.catering-contact-ctas {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.catering-contact-ctas .cta-big {
+  background: var(--ember);
+  color: var(--cream);
+  padding: 15px 34px;
+  border: none;
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  transition: background 0.2s;
+}
+
+.catering-contact-ctas .cta-big:hover { background: var(--ember-light); }
+
+.catering-contact-ctas .cta-outline {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(237,229,210,0.5);
+  border: 1px solid rgba(237,229,210,0.16);
+  padding: 15px 26px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.catering-contact-ctas .cta-outline:hover {
+  color: var(--cream);
+  border-color: rgba(237,229,210,0.4);
+}
+
+@media (max-width: 768px) {
+  .catering-hero { grid-template-columns: 1fr; }
+  .catering-hero-text { padding: 48px 24px; border-right: none; border-bottom: 1px solid var(--border-faint); }
+  .catering-hero-photo { height: 240px; }
+  .catering-title { font-size: clamp(2.8rem, 12vw, 5rem); }
+
+  .catering-services { grid-template-columns: 1fr; }
+  .catering-service-card { padding: 36px 24px; border-right: none; border-bottom: 1px solid var(--border-faint); }
+  .catering-service-card:last-child { border-bottom: none; }
+
+  .catering-featured { grid-template-columns: 1fr; }
+  .catering-featured-text { padding: 44px 24px; border-right: none; border-bottom: 1px solid var(--border-faint); }
+  .catering-featured-photo { min-height: 240px; }
+
+  .catering-menu-header { padding: 44px 24px 32px; }
+  .catering-menu-grid { grid-template-columns: 1fr; }
+  .catering-cat {
+    border-right: none !important;
+    padding: 28px 24px;
+  }
+  .catering-extras-note { padding: 16px 24px; }
+
+  .catering-contact { padding: 64px 24px; }
+  .catering-contact-ctas { flex-direction: column; align-items: stretch; }
+  .catering-contact-ctas .cta-big,
+  .catering-contact-ctas .cta-outline { text-align: center; }
+}

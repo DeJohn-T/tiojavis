@@ -1,0 +1,318 @@
+.resv-page {
+  padding-top: 64px;
+  min-height: 100vh;
+  background: var(--void);
+}
+
+/* ── HERO ── */
+.resv-hero {
+  position: relative;
+  min-height: 480px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.resv-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.resv-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.28) saturate(0.6);
+}
+
+.resv-hero-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(11,9,7,0.1) 0%, rgba(11,9,7,0.8) 100%);
+}
+
+.resv-hero-inner {
+  position: relative;
+  z-index: 1;
+  padding: 64px 52px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.resv-eyebrow {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ember);
+}
+
+.resv-title {
+  font-size: clamp(4.5rem, 10vw, 9.5rem);
+  font-weight: 300;
+  line-height: 0.88;
+  color: var(--cream);
+  margin: 0;
+}
+
+.resv-title em {
+  color: var(--ember);
+  font-style: italic;
+}
+
+.resv-subtitle {
+  font-size: 0.85rem;
+  font-weight: 300;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+/* ── BOOKING CTA SECTION ── */
+.resv-cta-section {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border-faint);
+}
+
+.resv-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 96px 52px;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resv-cta-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.resv-cta-kicker {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.resv-cta-title {
+  font-size: clamp(3rem, 6vw, 6.5rem);
+  font-weight: 300;
+  line-height: 0.9;
+  color: var(--cream);
+  margin: 0;
+}
+
+.resv-cta-title em {
+  color: var(--ember);
+  font-style: italic;
+}
+
+.resv-cta-body {
+  font-size: 0.92rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 400px;
+}
+
+.resv-cta-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.resv-ot-btn {
+  display: inline-block;
+  background: var(--ember);
+  color: var(--cream);
+  padding: 20px 52px;
+  font-size: 0.9rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 0.2s;
+}
+
+.resv-ot-btn:hover { background: var(--ember-light); }
+
+.resv-cta-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.resv-cta-divider::before,
+.resv-cta-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(237,229,210,0.1);
+}
+
+.resv-cta-divider span {
+  font-size: 0.65rem;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ghost);
+}
+
+.resv-call {
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1;
+  transition: color 0.2s;
+}
+
+.resv-call:hover { color: var(--gold-light); }
+
+.resv-call-note {
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  color: var(--ghost);
+  margin-top: -4px;
+}
+
+/* ── INFO STRIP ── */
+.resv-info {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1fr;
+  border-top: 1px solid var(--border-faint);
+}
+
+.resv-info-block {
+  padding: 56px 52px;
+  border-right: 1px solid var(--border-faint);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.resv-info-block:last-child { border-right: none; }
+
+.resv-info-label {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.resv-info-block p {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.resv-map-link {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ember);
+  border-bottom: 1px solid var(--ember);
+  padding-bottom: 2px;
+  align-self: flex-start;
+  transition: opacity 0.2s;
+  margin-top: 4px;
+}
+
+.resv-map-link:hover { opacity: 0.65; }
+
+/* hours */
+.resv-hour-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--border-faint);
+  font-size: 0.85rem;
+}
+
+.resv-hour-row:first-of-type { border-top: 1px solid var(--border-faint); }
+.resv-hour-row span:first-child { color: rgba(237,229,210,0.55); }
+.resv-hour-row span:last-child  { color: var(--muted); }
+.resv-hour-row span.closed      { color: rgba(237,229,210,0.18); font-style: italic; }
+
+/* happy hour */
+.resv-hh-time {
+  font-size: 3.2rem;
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+  margin: 4px 0;
+}
+
+.resv-hh-time em { font-style: italic; font-size: 0.5em; color: var(--muted); }
+
+.resv-hh-split {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resv-hh-days {
+  font-size: 0.68rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(237,229,210,0.28);
+  margin-bottom: 12px;
+}
+
+.resv-hh-deals {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.resv-hh-deal {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.resv-hh-price {
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ember);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.resv-hh-deal span:last-child {
+  font-size: 0.82rem;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .resv-hero { min-height: 360px; }
+  .resv-hero-inner { padding: 40px 24px 56px; }
+  .resv-title { font-size: clamp(3.5rem, 15vw, 7rem); }
+
+  .resv-cta-section { padding: 0; }
+  .resv-cta-inner { grid-template-columns: 1fr; padding: 56px 24px; gap: 36px; }
+  .resv-cta-title { font-size: clamp(2.8rem, 12vw, 5rem); }
+  .resv-ot-btn { width: 100%; text-align: center; }
+  .resv-cta-divider { max-width: 100%; }
+  .resv-call { font-size: clamp(1.8rem, 8vw, 2.6rem); }
+
+  .resv-info { grid-template-columns: 1fr; }
+  .resv-info-block { padding: 36px 24px; border-right: none; border-bottom: 1px solid var(--border-faint); }
+  .resv-info-block:last-child { border-bottom: none; }
+}

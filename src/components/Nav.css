@@ -7,17 +7,17 @@
   align-items: center;
   justify-content: space-between;
   padding: 0 40px;
-  background: linear-gradient(to bottom, rgba(11,9,7,0.72) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(7,18,37,0.86) 0%, rgba(7,18,37,0.22) 72%, transparent 100%);
   border-bottom: 1px solid transparent;
   transition: background 0.4s ease, border-color 0.4s ease;
 }
 
 .nav.scrolled,
 .nav.nav--open {
-  background: rgba(11,9,7,0.97);
+  background: rgba(7,18,37,0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border-bottom-color: rgba(237,229,210,0.07);
+  border-bottom-color: rgba(21,134,141,0.22);
 }
 
 .nav-wordmark { display: flex; align-items: center; line-height: 1; }
@@ -27,8 +27,6 @@
   width: auto;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1);
-  opacity: 0.9;
 }
 
 .nav-links {
@@ -39,17 +37,20 @@
 }
 
 .nav-links a {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.72rem;
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(237,229,210,0.5);
-  transition: color 0.2s;
+  color: rgba(242,234,216,0.55);
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
 .nav-links a:hover { color: var(--cream); }
-.nav-links a.active { color: var(--ember); }
+.nav-links a.active {
+  color: var(--gold);
+  text-shadow: 0 0 18px rgba(21,134,141,0.42);
+}
 
 .nav-right {
   display: flex;
@@ -58,11 +59,11 @@
 }
 
 .nav-phone {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 400;
   letter-spacing: 0.1em;
-  color: rgba(237,229,210,0.38);
+  color: rgba(242,234,216,0.45);
   transition: color 0.2s;
 }
 
@@ -75,11 +76,16 @@
   color: var(--cream);
   background: var(--ember);
   padding: 9px 20px;
-  transition: background 0.2s;
+  border: 1px solid rgba(228,169,63,0.28);
+  box-shadow: 0 0 0 1px rgba(7,18,37,0.3);
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .nav-reserve:hover,
-.nav-reserve.active { background: var(--ember-light); }
+.nav-reserve.active {
+  background: var(--ember-light);
+  border-color: rgba(228,169,63,0.5);
+}
 
 /* ── HAMBURGER BUTTON ── */
 .nav-hamburger {
@@ -115,7 +121,9 @@
   position: fixed;
   inset: 0;
   z-index: 800;
-  background: rgba(11,9,7,0.98);
+  background:
+    linear-gradient(180deg, rgba(7,18,37,0.98), rgba(7,10,16,0.99)),
+    var(--navy-deep);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -142,10 +150,10 @@
 }
 
 .nav-mobile-links a {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: clamp(2.4rem, 10vw, 3.5rem);
   font-weight: 300;
-  color: rgba(237,229,210,0.55);
+  color: rgba(242,234,216,0.62);
   letter-spacing: -0.01em;
   line-height: 1.2;
   display: block;
@@ -155,7 +163,10 @@
 }
 
 .nav-mobile-links a:hover,
-.nav-mobile-links a.active { color: var(--ember); }
+.nav-mobile-links a.active {
+  color: var(--gold);
+  text-shadow: 0 0 24px rgba(21,134,141,0.35);
+}
 
 .nav-mobile-bottom {
   display: flex;
@@ -175,7 +186,7 @@
   font-size: 0.72rem;
   font-weight: 300;
   letter-spacing: 0.1em;
-  color: rgba(237,229,210,0.25);
+  color: rgba(242,234,216,0.3);
 }
 
 /* ── MOBILE BREAKPOINT ── */

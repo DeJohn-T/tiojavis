@@ -1,33 +1,34 @@
 .footer {
-  background: var(--surface);
+  background:
+    linear-gradient(180deg, var(--navy) 0%, var(--navy-deep) 100%);
   color: var(--cream);
-  border-top: 1px solid rgba(237,229,210,0.07);
+  border-top: 1px solid rgba(21,134,141,0.22);
 }
 
 .footer-main {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
-  border-bottom: 1px solid rgba(237,229,210,0.07);
+  border-bottom: 1px solid rgba(242,234,216,0.08);
 }
 
 .footer-col {
   padding: 56px 44px;
-  border-right: 1px solid rgba(237,229,210,0.06);
+  border-right: 1px solid rgba(242,234,216,0.07);
 }
 
 .footer-col:last-child { border-right: none; }
 
 .footer-wordmark {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
   color: var(--cream);
   margin-bottom: 10px;
   line-height: 1;
   letter-spacing: 0.02em;
 }
 
-.footer-wordmark span { color: var(--ember); }
+.footer-wordmark span { color: var(--gold); }
 
 .footer-sub {
   font-size: 0.75rem;
@@ -45,7 +46,7 @@
 }
 
 .footer-col-head {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.6rem;
   font-weight: 500;
   letter-spacing: 0.22em;
@@ -65,11 +66,14 @@
 .footer-links a {
   font-size: 0.85rem;
   font-weight: 300;
-  color: rgba(237,229,210,0.42);
-  transition: color 0.2s;
+  color: rgba(242,234,216,0.48);
+  transition: color 0.2s, text-shadow 0.2s;
 }
 
-.footer-links a:hover { color: var(--cream); }
+.footer-links a:hover {
+  color: var(--cream);
+  text-shadow: 0 0 16px rgba(21,134,141,0.28);
+}
 
 .footer-bottom {
   padding: 20px 44px;
@@ -91,14 +95,14 @@
   .footer-main { grid-template-columns: 1fr 1fr; }
   .footer-col { padding: 36px 24px; }
   .footer-col:nth-child(2) { border-right: none; }
-  .footer-col:nth-child(3) { border-top: 1px solid rgba(237,229,210,0.06); }
-  .footer-col:last-child { border-top: 1px solid rgba(237,229,210,0.06); }
+  .footer-col:nth-child(3) { border-top: 1px solid rgba(242,234,216,0.07); }
+  .footer-col:last-child { border-top: 1px solid rgba(242,234,216,0.07); }
   .footer-wordmark { font-size: 1.5rem; }
   .footer-bottom { padding: 16px 24px; flex-direction: column; gap: 4px; align-items: flex-start; }
 }
 
 @media (max-width: 480px) {
   .footer-main { grid-template-columns: 1fr; }
-  .footer-col { border-right: none !important; border-top: 1px solid rgba(237,229,210,0.06); }
+  .footer-col { border-right: none !important; border-top: 1px solid rgba(242,234,216,0.07); }
   .footer-col:first-child { border-top: none; }
 }

@@ -13,22 +13,22 @@
   justify-content: space-between;
   align-items: center;
   padding: 7px 16px 7px 0;
-  border-bottom: 1px solid rgba(237,229,210,0.05);
+  border-bottom: 1px solid rgba(242,234,216,0.07);
   font-size: 0.83rem;
 }
 
 .beer-row:nth-child(even) {
   padding-left: 24px;
   padding-right: 0;
-  border-left: 1px solid rgba(237,229,210,0.05);
+  border-left: 1px solid rgba(242,234,216,0.07);
 }
 
 .beer-row span:first-child { color: rgba(237,229,210,0.65); font-weight: 300; }
 
 .beer-row span:last-child {
-  font-family: 'Alfa Slab One', serif;
+  font-family: var(--font-accent);
   font-size: 0.75rem;
-  color: var(--ember);
+  color: var(--gold);
   flex-shrink: 0;
   margin-left: 8px;
 }

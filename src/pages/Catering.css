@@ -23,7 +23,7 @@
 }
 
 .catering-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: clamp(3.2rem, 6.5vw, 6rem);
   font-weight: 300;
   line-height: 0.9;
@@ -68,7 +68,7 @@
 .catering-service-card:last-child { border-right: none; }
 
 .catering-service-title {
-  font-family: 'Alfa Slab One', serif;
+  font-family: var(--font-accent);
   font-size: 1.3rem;
   color: var(--cream);
   margin-bottom: 16px;
@@ -108,7 +108,7 @@
 }
 
 .catering-featured-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 3.5vw, 3rem);
   font-weight: 300;
   color: var(--cream);
@@ -116,7 +116,7 @@
 }
 
 .catering-featured-price {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: 2.2rem;
   font-weight: 400;
   color: var(--ember);
@@ -124,7 +124,7 @@
 }
 
 .catering-featured-price span {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.85rem;
   font-weight: 300;
   color: var(--muted);
@@ -180,7 +180,7 @@
 }
 
 .catering-menu-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: clamp(2.5rem, 4vw, 3.5rem);
   font-weight: 300;
   color: var(--cream);
@@ -204,7 +204,7 @@
 
 .cat-head {
   display: block;
-  font-family: 'Alfa Slab One', serif;
+  font-family: var(--font-accent);
   font-size: 1rem;
   color: var(--cream);
   margin-bottom: 4px;
@@ -236,7 +236,7 @@
 }
 
 .cat-row span:last-child {
-  font-family: 'Alfa Slab One', serif;
+  font-family: var(--font-accent);
   font-size: 0.75rem;
   color: var(--ember);
   flex-shrink: 0;
@@ -272,7 +272,7 @@
 .catering-contact-inner .section-kicker { color: var(--gold); }
 
 .catering-contact-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
   font-size: clamp(2.2rem, 5.5vw, 4rem);
   font-weight: 300;
   color: var(--cream);
@@ -314,7 +314,7 @@
 .catering-contact-ctas .cta-big:hover { background: var(--ember-light); }
 
 .catering-contact-ctas .cta-outline {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.78rem;
   font-weight: 400;
   letter-spacing: 0.1em;

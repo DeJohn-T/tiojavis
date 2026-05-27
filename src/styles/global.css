@@ -1,42 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Alfa+Slab+One&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Bree+Serif&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400;1,9..144,600&display=swap');
 
 :root {
-  /* ── DARK MOODY PALETTE ── */
-  --void:         #0b0907;
-  --surface:      #0f0d09;
-  --surface-2:    #181410;
-  --surface-3:    #221c14;
+  /* ── HERITAGE CANTINA PALETTE ── */
+  --void:         #070a10;
+  --surface:      #0d1628;
+  --surface-2:    #111d33;
+  --surface-3:    #192642;
+  --navy:         #111d3a;
+  --navy-deep:    #071225;
 
-  /* accent: deep amber / ember */
-  --ember:        #c46010;
-  --ember-light:  #e07018;
-  --ember-dim:    rgba(196, 96, 16, 0.3);
+  /* logo echoes */
+  --teal:         #15868d;
+  --teal-light:   #29a2a8;
+  --ember:        #c7652c;
+  --ember-light:  #df7a35;
+  --ember-dim:    rgba(199, 101, 44, 0.3);
 
-  /* accent: warm gold */
-  --gold:         #cc8c0e;
-  --gold-light:   #e4a420;
+  /* warm gold */
+  --gold:         #e4a93f;
+  --gold-light:   #f3bd58;
 
   /* text */
-  --cream:        #ede5d2;
-  --muted:        rgba(237,229,210,0.5);
-  --ghost:        rgba(237,229,210,0.18);
+  --cream:        #f2ead8;
+  --muted:        rgba(242,234,216,0.58);
+  --ghost:        rgba(242,234,216,0.2);
 
   /* borders */
-  --border-faint: rgba(237,229,210,0.07);
-  --border-mid:   rgba(237,229,210,0.13);
-  --border-warm:  rgba(196,96,16,0.25);
+  --border-faint: rgba(242,234,216,0.08);
+  --border-mid:   rgba(242,234,216,0.14);
+  --border-warm:  rgba(199,101,44,0.28);
+  --border-cool:  rgba(21,134,141,0.24);
+
+  /* typography */
+  --font-body:    'Alegreya Sans', sans-serif;
+  --font-display: 'Fraunces', serif;
+  --font-accent:  'Bree Serif', serif;
 
   /* ── LEGACY VARS (kept for backwards-compat) ── */
-  --off-white:    #ede5d2;
-  --sand:         #221c14;
-  --ink:          #0b0907;
-  --dark:         #060504;
-  --rust:         #c46010;
-  --rust-deep:    #a84c08;
-  --teal:         #cc8c0e;
-  --teal-light:   #e4a420;
-  --dim:          rgba(237,229,210,0.45);
-  --border:       1.5px solid rgba(237,229,210,0.09);
+  --off-white:    var(--cream);
+  --sand:         var(--surface-3);
+  --ink:          var(--void);
+  --dark:         #05070b;
+  --rust:         var(--ember);
+  --rust-deep:    #9f4318;
+  --dim:          rgba(242,234,216,0.48);
+  --border:       1.5px solid rgba(242,234,216,0.1);
 }
 
 *, *::before, *::after {
@@ -50,7 +58,7 @@ html { scroll-behavior: smooth; }
 body {
   background: var(--void);
   color: var(--cream);
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   overflow-x: hidden;
   cursor: none;
 }
@@ -71,16 +79,16 @@ img { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* ── TYPE UTILITIES ── */
 .alfa {
-  font-family: 'Alfa Slab One', serif;
+  font-family: var(--font-accent);
 }
 
 .cormorant {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: var(--font-display);
 }
 
 /* ── KICKER LABEL ── */
 .section-kicker {
-  font-family: 'DM Sans', sans-serif;
+  font-family: var(--font-body);
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.22em;

@@ -2,20 +2,21 @@ import { NavLink } from 'react-router-dom'
 import './Menu.css'
 
 const ENTREES = [
-  { name: 'Lunch Fajita', desc: '6 oz. mixed chicken and beef fajita with handmade flour tortillas, rice, beans, and chili con queso' },
-  { name: 'Texas Combo', desc: 'Cheese enchilada with onions, crispy beef taco, and sliced fajita meat, served with fresh tortilla, rice, and refried beans' },
-  { name: 'Plaza Suissas', desc: 'Two chopped fajita chicken or pork enchiladas topped with crema suissas, Swiss cheese, sour cream, and green onions, served with rice and refried beans' },
-  { name: 'Plaza Al Carbon', desc: 'Two fajita beef or chicken enchiladas topped with cheese and enchilada sauce, served with rice and refried beans' },
-  { name: 'El Leon', desc: 'Two soft or crispy tacos — fajita beef or chicken — topped with lettuce, tomatoes, and cheese, served with rice and refried beans' },
-  { name: 'Delicioso', desc: 'Chicken flauta, guacamole, pico, sour cream, and a lunch taco al carbon (fajita beef or chicken), served with rice and refried beans' },
-  { name: 'Adobo Marinated Chicken', desc: 'Chargrilled chicken with adobo marinade and grilled pineapple, served with salsa verde, cilantro lime rice, and mixed vegetables' },
-  { name: 'Taco Al Pastor', desc: 'Roasted pork, grilled onion, and pineapple on corn tortillas with tomatillo salsa and cilantro lime rice' },
-  { name: 'Blackened Shrimp Tacos', desc: 'Gulf shrimp and slaw on corn tortillas with poblano crema and cilantro lime rice' },
-  { name: 'Carne Picada Tacos', desc: 'Fajita beef, sautéed onions, avocado, and cilantro on corn tortillas with molcajete salsa and cilantro lime rice' },
-  { name: 'Burrito Bowl', desc: 'Black beans, roasted corn, avocados, cilantro lime rice, tomatoes, sour cream, cilantro, and queso fresco — add chicken, shrimp, or beef' },
-  { name: 'Spicy Tuna Tostadas', desc: 'Raw ahi tuna, chilis, scallions, crispy tortilla, chipotle crema, avocado, and cilantro lime rice' },
-  { name: 'Taco Salad', desc: 'Romaine, avocado, crispy tortilla, black beans, roasted corn, queso fresco — add fajita beef, fajita chicken, or grilled shrimp' },
-  { name: 'Fajita Burger', desc: 'Brioche bun, Monterey Jack cheese, and bacon, served with fries' },
+  { name: 'Lunch Fajita', price: 18, desc: '6 oz. mixed chicken and beef fajita. House made tortillas.' },
+  { name: 'Texas Combo', price: 17, desc: 'Cheese enchilada with onions, crispy beef taco and sliced fajita meat. Served with fresh tortilla, rice and refried beans.' },
+  { name: 'Plaza Suissas', price: 15, desc: 'Two chopped chicken fajita or pork carnitas enchiladas topped with crema suissas, Swiss cheese, sour cream and green onions. Served with rice and refried beans.' },
+  { name: 'Plaza Al Carbon', price: 15, desc: 'Two beef or chicken fajita enchiladas topped with cheese, rice and refried beans.' },
+  { name: 'El Leon', price: 15, desc: 'Two soft or crispy tacos, fajita beef or chicken topped with lettuce, tomatoes and cheese. Served with rice and refried beans.' },
+  { name: 'Delicioso', price: 14, desc: 'Chicken flauta, guacamole, pico, sour cream and a lunch taco al carbon (beef or chicken fajita). Served with rice and refried beans.' },
+  { name: 'Adobo Marinated Chicken', price: 17, desc: 'Adobo marinade, grilled pineapple, cilantro lime rice and mixed veggies. Served with salsa verde.' },
+  { name: 'Taco Al Pastor', price: 15, desc: 'Corn or flour tortillas, roasted pork, grilled onion and pineapple, tomatillo salsa, cilantro lime rice.' },
+  { name: 'Blackened Shrimp Tacos', price: 17, desc: 'Corn or flour tortillas, slaw, poblano crema, cilantro lime rice.' },
+  { name: 'Carne Picada Tacos', price: 16, desc: 'Corn or flour tortillas, fajita beef, avocado, cilantro, molcajete salsa, sautéed onions, cilantro lime rice.' },
+  { name: 'Burrito Bowl', price: 10, desc: 'Black beans, roasted corn, avocados, cilantro lime rice, tomatoes, sour cream, cilantro, queso fresco.', addons: [{ label: 'Add Chicken', price: 13 }, { label: 'Add Shrimp', price: 14 }, { label: 'Add Beef', price: 14 }] },
+  { name: 'Spicy Tuna Tostadas', price: 14, desc: 'Ahi tuna, chilis, scallions, crispy tortilla, chipotle crema and avocado, cilantro lime rice.' },
+  { name: 'Caesar Salad', price: 12, desc: 'Manchego cheese, crispy tortilla.', addons: [{ label: 'Fajita Beef', price: 16 }, { label: 'Fajita Chicken', price: 15 }, { label: 'Grilled Shrimp', price: 16 }] },
+  { name: 'Taco Salad', price: 12, desc: 'Romaine, avocado, crispy tortilla, black beans, queso fresco.', addons: [{ label: 'Add Fajita Beef', price: 16 }, { label: 'Add Grilled Shrimp', price: 16 }, { label: 'Add Fajita Chicken', price: 15 }] },
+  { name: 'Fajita Burger', price: 16, desc: 'Brioche bun, monterey jack cheese, and bacon, with fries.' },
 ]
 
 export default function MenuLunch() {
@@ -29,7 +30,7 @@ export default function MenuLunch() {
         <div className="menu-hero-text">
           <span className="menu-hero-kicker">Tuesday – Friday · 11am – 3pm</span>
           <h1 className="menu-hero-title">Lunch<br /><em>Menu</em></h1>
-          <p className="menu-hero-note">A focused midday menu. Ask your server about today's prices.</p>
+          <p className="menu-hero-note">A focused midday menu.</p>
         </div>
       </div>
 
@@ -46,7 +47,15 @@ export default function MenuLunch() {
               <div className="menu-item-left">
                 <span className="menu-item-name">{item.name}</span>
                 {item.desc && <span className="menu-item-desc">{item.desc}</span>}
+                {item.addons && (
+                  <span className="menu-item-addons">
+                    {item.addons.map(a => (
+                      <span key={a.label}>{a.label} <b>${a.price}</b></span>
+                    ))}
+                  </span>
+                )}
               </div>
+              <span className="menu-item-price">${item.price}</span>
             </div>
           ))}
         </div>

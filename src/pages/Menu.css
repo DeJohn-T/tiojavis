@@ -185,6 +185,24 @@
   flex-shrink: 0;
 }
 
+.menu-item-addons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 6px;
+}
+
+.menu-item-addons span {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 300;
+}
+
+.menu-item-addons span b {
+  color: var(--gold);
+  font-weight: 500;
+}
+
 /* variants: span full width below name/price row */
 .menu-item-variants {
   grid-column: 1 / -1;

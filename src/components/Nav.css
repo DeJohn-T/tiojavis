@@ -191,7 +191,13 @@
 
 /* ── MOBILE BREAKPOINT ── */
 @media (max-width: 768px) {
-  .nav { padding: 0 20px; }
+  .nav {
+    padding: 0 20px;
+    background: rgba(7,18,37,0.97);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: rgba(21,134,141,0.15);
+  }
   .nav-links { display: none; }
   .nav-phone { display: none; }
   .nav-hamburger { display: flex; }

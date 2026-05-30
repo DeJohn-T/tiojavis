@@ -4,17 +4,17 @@ import './Bar.css'
 
 const MARGARITAS = [
   { name: 'Javirita', desc: '100% agave tequila, fresh citrus juices, orange liqueur', variants: [{ label: 'Regular / Grande', price: '10 / 18' }] },
-  { name: 'Additional Flavors', desc: 'Strawberry · Raspberry · Peach · Sangria', variants: [{ label: 'Add to any marg — Regular / Grande', price: '+1 / +2' }] },
-  { name: 'Build Your Own', desc: 'Shaken with house simple, fresh citrus juices, on the rocks. Choose your tequila from the program below. Add Cointreau (+$1) or Grand Marnier (+$2).' },
+  { name: 'Additional Flavors', desc: 'Strawberry · Raspberry · Peach ·  Sangria· Blueberry · Blue Curacao · Mango', variants: [{ label: 'Add to any marg — Regular / Grande', price: '+1 / +2' }] },
+  { name: 'Build Your Own', desc: 'Your choice of tequila, fresh citrus, house simple, on the rocks. Sugar or salt rim. Add Cointreau or Grand Marnier.' },
 ]
 
 const SIGNATURE = [
   { name: 'Blueberry Lemon Drop', desc: 'Blueberry vodka, fresh blueberries, fresh lemon juice, sugar-rimmed martini glass', price: 14 },
   { name: 'Mexican Mojito', desc: 'Silver tequila, fresh lime juice, mint', price: 13 },
-  { name: 'House Red or White Sangria', desc: 'Red or white wine, fresh citrus, Absolut Raspberri, Bacardi Limón, peach purée', price: 13 },
+  { name: 'Red or White Sangria', desc: 'Merlot or Pinot Grigio, fresh citrus, Absolut Raspberri, Bacardi Limón, peach purée', price: 13 },
   { name: 'Skinny Margarita', desc: '100% agave silver tequila, fresh lime juice, Grand Marnier, Cointreau, agave', variants: [{ label: 'Regular / Grande', price: '12 / 19' }] },
   { name: 'Paloma', desc: 'Reposado tequila, grapefruit, fresh lime juice, agave, club soda', price: 13 },
-  { name: 'Spicy Margarita', desc: 'Añejo tequila, fresh lime juice, agave, cucumber, Cointreau, jalapeño', price: 17 },
+  { name: 'Spicy Margarita', desc: 'Añejo tequila, fresh lime juice, agave, cucumber, Cointreau, jalapeño and a Tajin rim', price: 17 },
   { name: 'Ranch Water', desc: 'Topo Chico, hibiscus syrup, lime juice, silver tequila', price: 15 },
   { name: 'Hibiscus Spritz', desc: 'Mint leaves, agave simple syrup, hibiscus syrup, pinot grigio, club soda, lemon juice', price: 15 },
 ]
@@ -26,6 +26,7 @@ const TEQUILA_HIGHLAND = [
   { name: 'Don Julio',       plata: 13, reposado: 15, anejo: 17, flight: 15 },
   { name: 'Patrón',          plata: 13, reposado: 15, anejo: 17, flight: 15 },
   { name: 'Partida',         plata: 11, reposado: 13, anejo: 15, flight: 13 },
+  { name: 'Pantalones',         plata: 13, reposado: 15, anejo: 17, flight: 15 },
 ]
 
 const TEQUILA_LOWLAND = [
@@ -35,6 +36,11 @@ const TEQUILA_LOWLAND = [
   { name: 'Tres Agaves',             plata:  9, reposado: 11, anejo: 13, flight: 11 },
   { name: 'Jose Cuervo Tradicional', plata: 10, reposado: 12, anejo: 14, flight: 12 },
   { name: 'Hornitos',                plata:  8, reposado: 10, anejo: 12, flight: 10 },
+]
+
+const TEQUILA_FLAVORED = [
+  { name: '1800 Coconut',       price: 13 },
+  { name: 'Hornitos Pineapple', price: 13 },
 ]
 
 const MEZCAL = [
@@ -54,8 +60,8 @@ const SELTZERS = [
 ]
 
 const BEERS = [
-  { cat: 'Louisiana Brewed', items: ['Abita Amber $6', 'Abita Purple Haze $6', 'Gnarly Barley Holy Roller $6', 'Gnarly Barley Jucifer IPA $6', 'Gnarly Barley Milk Porter $6', 'Gnarly Barley Korova $6', 'Goose Island IPA $7', 'NOLA Blonde (NA) $5', 'Parish Canebrake $7', 'Urban South Holy Roller $7', 'Urban South Paradise Park $7', 'Yuengling $6'] },
-  { cat: 'Domestic', items: ['Angry Orchard $6', 'Blue Moon $6', 'Bud Light $5', 'Budweiser $5', 'Coors Light $5', 'Michelob ULTRA $5', 'Miller Lite $5', "O'Doul's Amber (NA) $5", 'Shiner Bock $6'] },
+  { cat: 'Louisiana Brewed', items: ['Abita Amber $6', 'Abita Purple Haze $6', 'Gnarly Barley Holy Roller $6', 'Gnarly Barley Jucifer IPA $6', 'Gnarly Barley Milk Porter $6', 'Gnarly Barley Korova $6', 'Parish Canebrake $7', 'Urban South Holy Roller $7', 'Urban South Paradise Park $7', 'Yuengling $6'] },
+  { cat: 'Domestic', items: ['Angry Orchard $6', 'Blue Moon $6', 'Bud Light $5', 'Budweiser $5', 'Coors Light $5', 'Michelob ULTRA $5', 'Miller Lite $5', 'Shiner Bock $6'] },
   { cat: 'Mexican', items: ['Bohemia $5', 'Corona $6', 'Corona Light $6', 'Corona Premier $6', 'Dos Equis Lager $6', 'Dos Equis Ámbar $6', 'Modelo Especial $6', 'Modelo Negra $6', 'Pacifico $7', 'Sol $7', 'Tecate $6', 'Victoria $6'] },
   { cat: 'Imported', items: ['Heineken $6', 'Stella Artois $6'] },
 ]
@@ -126,6 +132,19 @@ export default function Bar() {
             desc="The Lowland climate is warmer with volcanic soils — yields a smaller, less sweet agave producing a more herbaceous and earthy tequila."
             rows={TEQUILA_LOWLAND}
           />
+
+          <div className="tequila-block">
+            <div className="tequila-block-head">
+              <p className="tequila-block-title">Flavored</p>
+              <p className="tequila-block-desc">Infused expressions — served on the rocks or neat</p>
+            </div>
+            {TEQUILA_FLAVORED.map((item) => (
+              <div className="menu-item" key={item.name}>
+                <span className="menu-item-name">{item.name}</span>
+                <span className="menu-item-price">${item.price}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <MenuSection title="Mezcal" note="A distilled beverage made from smoked agave" items={MEZCAL} />

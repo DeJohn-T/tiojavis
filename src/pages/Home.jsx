@@ -112,7 +112,7 @@ export default function Home() {
       <div className="h-photo-full reveal">
         <img src="/enchiladas.webp" alt="Enchiladas at Tío Javi's" />
         <div className="h-photo-full-label">
-          <span className="h-photo-full-dish cormorant">Enchiladas Verdes.</span>
+          <span className="h-photo-full-dish cormorant">Suissa Enchiladas.</span>
         </div>
       </div>
 

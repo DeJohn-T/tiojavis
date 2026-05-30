@@ -31,14 +31,15 @@ export default function Footer() {
         <div className="footer-col">
           <span className="footer-col-head">Follow</span>
           <ul className="footer-links">
-            <li><a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com" target="_blank" rel="noreferrer">Facebook</a></li>
+            <li><a href="https://instagram.com/tiojavis_" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/NinfasLouisiana" target="_blank" rel="noreferrer">Facebook</a></li>
+              <li><a href="https://tiktok.com/@tiojavis_" target="_blank" rel="noreferrer">TikTok</a></li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>© 2026 Tío Javi's Mexican Grill · All rights reserved</p>
-        <p>Design by <span>Deej</span></p>
+        <p>© 2026 Tío Javi's Mexican Grill · All rights reserved · (Concept)</p>
+        <p>Design by <span>Deej $)</span></p>
       </div>
     </footer>
   )
